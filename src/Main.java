@@ -20,9 +20,10 @@ public class Main {
             if (!VALID_SYMBOLS.contains(Character.toString(password.charAt(i))) || password.length() > 20) {
                 throw new WrongPasswordException();
             }
-            if (!password.equals(confirmPasswordS)) {
-                throw new WrongPasswordException();
-            }
+
+        }
+        if (!password.equals(confirmPasswordS)) {
+            throw new WrongPasswordException();
         }
     }
 }
